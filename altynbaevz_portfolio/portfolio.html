@@ -335,7 +335,7 @@
 </head>
 <body>
     <canvas id="spaceCanvas"></canvas>
-    
+
     <header>
         <div class="container">
             <nav>
@@ -365,15 +365,15 @@
                 <div class="about-text">
                     <p>
                     I’m just an alien — a builder, a thinker, and an explorer.
-                    Like the Greek philosophers, I question, study, and seek to understand—anything and everything. As long as I’m alive, I’ll keep learning. The only real break comes at the end. 
+                    Like the Greek philosophers, I question, study, and seek to understand—anything and everything. As long as I’m alive, I’ll keep learning. The only real break comes at the end.
                     I’m especially drawn to AI, Machine Learning, and Space Technology — not just for what they are, but for what they might help us become.
                     </p>
                     <p>
-                        I believe technology should elevate human potential, not replace it. Every system I design 
+                        I believe technology should elevate human potential, not replace it. Every system I design
                         and every line of code I write is guided by this principle.
                     </p>
                     <p>
-                        My approach combines deep technical expertise with philosophical rigor, ensuring that what 
+                        My approach combines deep technical expertise with philosophical rigor, ensuring that what
                         we build actually makes the world better—not just faster or more efficient.
                     </p>
                     <p>Technologies I’m Exploring & Building With:</p>
@@ -396,7 +396,7 @@
                       border-radius: 5px;
                     " aria-label="Zinetdin Altynbaev"></div>
                   </div>
-                  
+
             </div>
         </div>
     </section>
@@ -413,11 +413,11 @@
                 <div class="project-card">
                     <!-- <img src="https://via.placeholder.com/300x200" alt="Project 1"> -->
                     <div class="project-info">
-                        <h3>Coming Soon!</h3>
-                        <!-- <p>An AI assistant that combines philosophical reasoning with technical problem-solving.</p>
+                        <h3>ASL Recognition for th Alphabet</h3>
+                        <p>An AI assistant that combines philosophical reasoning with technical problem-solving.</p>
                         <div class="project-links">
                             <a href="#" target="_blank">Live Demo</a>
-                            <a href="#" target="_blank">GitHub</a> -->
+                            <a href="https://github.com/z1netdin/ASL_Accessibility" target="_blank">GitHub</a> -->
                         </div>
                     </div>
                 </div>
@@ -500,20 +500,20 @@
           </form>
         </div>
       </section>
-      
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Space canvas animation
             const canvas = document.getElementById('spaceCanvas');
             const ctx = canvas.getContext('2d');
-            
+
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            
+
             const stars = [];
             const starCount = Math.floor(window.innerWidth * window.innerHeight / 1000);
-            
+
             for (let i = 0; i < starCount; i++) {
                 stars.push({
                     x: Math.random() * canvas.width,
@@ -523,44 +523,44 @@
                     vy: Math.floor(Math.random() * 50) - 25
                 });
             }
-            
+
             function drawStars() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = 'white';
-                
+
                 stars.forEach(star => {
                     ctx.beginPath();
                     ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
                     ctx.fill();
-                    
+
                     star.x += star.vx / 100;
                     star.y += star.vy / 100;
-                    
+
                     if (star.x < 0 || star.x > canvas.width) star.vx = -star.vx;
                     if (star.y < 0 || star.y > canvas.height) star.vy = -star.vy;
                 });
-                
+
                 requestAnimationFrame(drawStars);
             }
-            
+
             drawStars();
-            
+
             window.addEventListener('resize', function() {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
             });
-            
+
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
                         behavior: 'smooth'
                     });
                 });
             });
-            
+
             // // Form submission
             // const form = document.querySelector('.contact-form');
             // form.addEventListener('submit', function(e) {
